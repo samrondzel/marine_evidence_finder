@@ -1,0 +1,90 @@
+[
+  {
+    "id": "P01",
+    "local_pdf_filename": "rsbl20180484.pdf",
+    "citation": "Fouda et al. (2018)",
+    "title": "Dolphins simplify their vocal calls in response to increased ambient noise",
+    "doi": "10.1098/rsbl.2018.0484",
+    "doi_url": "https://doi.org/10.1098/rsbl.2018.0484",
+    "pdf_page_count": 5,
+    "sha256": "94af8c01cd7ecc34e7dc89e3d1064291f905f3b3c840f39a2fe6b06506a109a7",
+    "pdf_page_numbering": "1-based; cover page counts as page 1"
+  },
+  {
+    "id": "P02",
+    "local_pdf_filename": "41598_2017_Article_13252.pdf",
+    "citation": "Marley et al. (2017)",
+    "title": "Effects of vessel traffic and underwater noise on the movement, behaviour and vocalisations of bottlenose dolphins in an urbanised estuary",
+    "doi": "10.1038/s41598-017-13252-z",
+    "doi_url": "https://doi.org/10.1038/s41598-017-13252-z",
+    "pdf_page_count": 14,
+    "sha256": "b0eb65e4b56a1207e73f49d69902abdf2e7c4e73ff0fdfdef0365239a6fe66c3",
+    "pdf_page_numbering": "1-based; cover page counts as page 1"
+  },
+  {
+    "id": "P03",
+    "local_pdf_filename": "rsos190967.pdf",
+    "citation": "Dunlop (2019)",
+    "title": "The effects of vessel noise on the communication network of humpback whales",
+    "doi": "10.1098/rsos.190967",
+    "doi_url": "https://doi.org/10.1098/rsos.190967",
+    "pdf_page_count": 12,
+    "sha256": "af77fc193382856c5036b92a54a21ca3e60d8f683807f9da580bc44ddba0bcaf",
+    "pdf_page_numbering": "1-based; cover page counts as page 1"
+  },
+  {
+    "id": "P04",
+    "local_pdf_filename": "rsbl20160005.pdf",
+    "citation": "Blair et al. (2016)",
+    "title": "Evidence for ship noise impacts on humpback whale foraging behaviour",
+    "doi": "10.1098/rsbl.2016.0005",
+    "doi_url": "https://doi.org/10.1098/rsbl.2016.0005",
+    "pdf_page_count": 5,
+    "sha256": "507609fe703d96b7075aa015bd3db0dac03a0d39dac57ed596d4f23e8df9423a",
+    "pdf_page_numbering": "1-based; cover page counts as page 1"
+  },
+  {
+    "id": "P05",
+    "local_pdf_filename": "rspb20172314.pdf",
+    "citation": "Wisniewska et al. (2018)",
+    "title": "High rates of vessel noise disrupt foraging in wild harbour porpoises (Phocoena phocoena)",
+    "doi": "10.1098/rspb.2017.2314",
+    "doi_url": "https://doi.org/10.1098/rspb.2017.2314",
+    "pdf_page_count": 10,
+    "sha256": "e1cd83902a9d9d256039794f35c0680ebfc2a77a7acaa421b2a6b8b2c9a252b5",
+    "pdf_page_numbering": "1-based; cover page counts as page 1"
+  },
+  {
+    "id": "P06",
+    "local_pdf_filename": "rspb20112429.pdf",
+    "citation": "Rolland et al. (2012)",
+    "title": "Evidence that ship noise increases stress in right whales",
+    "doi": "10.1098/rspb.2011.2429",
+    "doi_url": "https://doi.org/10.1098/rspb.2011.2429",
+    "pdf_page_count": 6,
+    "sha256": "5f9a3d8a9588b71e77bbab659559d584f5ac0246e8f2b6f937a86cfa362c77dc",
+    "pdf_page_numbering": "1-based; cover page counts as page 1"
+  },
+  {
+    "id": "P07",
+    "local_pdf_filename": "41598_2021_Article_96506.pdf",
+    "citation": "ZoBell et al. (2021)",
+    "title": "Underwater noise mitigation in the Santa Barbara Channel through incentive-based vessel speed reduction",
+    "doi": "10.1038/s41598-021-96506-1",
+    "doi_url": "https://doi.org/10.1038/s41598-021-96506-1",
+    "pdf_page_count": 12,
+    "sha256": "5af4b011940df27f10be3ca4793db9d39211a0f55dc75bb0d597e969be6a3198",
+    "pdf_page_numbering": "1-based; cover page counts as page 1"
+  },
+  {
+    "id": "P08",
+    "local_pdf_filename": "sciadv.adf2987.pdf",
+    "citation": "Findlay et al. (2023)",
+    "title": "Small reductions in cargo vessel speed substantially reduce noise impacts to marine mammals",
+    "doi": "10.1126/sciadv.adf2987",
+    "doi_url": "https://doi.org/10.1126/sciadv.adf2987",
+    "pdf_page_count": 11,
+    "sha256": "8df98f783d786bd63d3191f1374b66449fdf78c8158f986947f6bac2bd996673",
+    "pdf_page_numbering": "1-based; cover page counts as page 1"
+  }
+]
