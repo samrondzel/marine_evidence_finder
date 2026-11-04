@@ -1,0 +1,132 @@
+{
+  "split": "dev",
+  "questions": 11,
+  "answerable_scored": 8,
+  "unsupported_not_scored": 3,
+  "top_k": 5,
+  "distinct_pages": false,
+  "mean_source_recall": 1.0,
+  "mean_direct_page_recall": 0.9375,
+  "per_question": [
+    {
+      "id": "Q01",
+      "type": "fact",
+      "source_recall": 1.0,
+      "page_recall": 1.0,
+      "gold_pages": [
+        "P01:p1"
+      ],
+      "found_pages": [
+        "P01:p1"
+      ]
+    },
+    {
+      "id": "Q04",
+      "type": "fact",
+      "source_recall": 1.0,
+      "page_recall": 1.0,
+      "gold_pages": [
+        "P03:p1",
+        "P03:p10"
+      ],
+      "found_pages": [
+        "P03:p1",
+        "P03:p10"
+      ]
+    },
+    {
+      "id": "Q06",
+      "type": "abstention",
+      "source_recall": null,
+      "page_recall": null
+    },
+    {
+      "id": "Q07",
+      "type": "fact",
+      "source_recall": 1.0,
+      "page_recall": 1.0,
+      "gold_pages": [
+        "P04:p1"
+      ],
+      "found_pages": [
+        "P04:p1"
+      ]
+    },
+    {
+      "id": "Q09",
+      "type": "abstention",
+      "source_recall": null,
+      "page_recall": null
+    },
+    {
+      "id": "Q10",
+      "type": "fact",
+      "source_recall": 1.0,
+      "page_recall": 1.0,
+      "gold_pages": [
+        "P06:p1"
+      ],
+      "found_pages": [
+        "P06:p1"
+      ]
+    },
+    {
+      "id": "Q12",
+      "type": "abstention",
+      "source_recall": null,
+      "page_recall": null
+    },
+    {
+      "id": "Q13",
+      "type": "fact",
+      "source_recall": 1.0,
+      "page_recall": 0.5,
+      "gold_pages": [
+        "P07:p2",
+        "P07:p5"
+      ],
+      "found_pages": [
+        "P07:p5"
+      ]
+    },
+    {
+      "id": "Q17",
+      "type": "fact",
+      "source_recall": 1.0,
+      "page_recall": 1.0,
+      "gold_pages": [
+        "P02:p2"
+      ],
+      "found_pages": [
+        "P02:p2"
+      ]
+    },
+    {
+      "id": "Q19",
+      "type": "fact",
+      "source_recall": 1.0,
+      "page_recall": 1.0,
+      "gold_pages": [
+        "P07:p1"
+      ],
+      "found_pages": [
+        "P07:p1"
+      ]
+    },
+    {
+      "id": "Q20",
+      "type": "fact",
+      "source_recall": 1.0,
+      "page_recall": 1.0,
+      "gold_pages": [
+        "P08:p1",
+        "P08:p3"
+      ],
+      "found_pages": [
+        "P08:p1",
+        "P08:p3"
+      ]
+    }
+  ],
+  "notes": "Dev only. Page recall uses direct supporting page labels, not exact passage match. Not answer faithfulness or abstention accuracy."
+}

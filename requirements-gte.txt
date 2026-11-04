@@ -1,0 +1,5 @@
+# Compatible with native ModernBERT (no trust_remote_code needed).
+# PyTorch is installed automatically by sentence-transformers if not available.
+numpy>=1.24,<3
+sentence-transformers>=3.4,<6
+transformers>=4.48,<5

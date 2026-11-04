@@ -1,0 +1,1940 @@
+{
+  "split": "dev",
+  "top_k": 5,
+  "chunk_count": 238,
+  "model_e5": "intfloat/e5-small-v2",
+  "model_gte": "Alibaba-NLP/gte-modernbert-base",
+  "e5_inputs_over_token_limit": 50,
+  "gte_inputs_over_token_limit": 0,
+  "distinct_pages": false,
+  "methods": {
+    "bm25": {
+      "predictions": [
+        {
+          "id": "Q01",
+          "question": "How did bottlenose dolphin whistle frequencies and contour complexity change under increased ambient noise in Fouda et al. (2018)?",
+          "retrieved": [
+            {
+              "chunk_id": "P01:p0001:c0001",
+              "source_id": "P01",
+              "pdf_page": 1,
+              "score": 31.868295
+            },
+            {
+              "chunk_id": "P01:p0001:c0002",
+              "source_id": "P01",
+              "pdf_page": 1,
+              "score": 28.014473
+            },
+            {
+              "chunk_id": "P01:p0001:c0003",
+              "source_id": "P01",
+              "pdf_page": 1,
+              "score": 26.589773
+            },
+            {
+              "chunk_id": "P01:p0004:c0004",
+              "source_id": "P01",
+              "pdf_page": 4,
+              "score": 20.606268
+            },
+            {
+              "chunk_id": "P02:p0012:c0001",
+              "source_id": "P02",
+              "pdf_page": 12,
+              "score": 18.122044
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "question": "In Dunlop (2019), what were the modelled communication ranges for low-frequency humpback social vocalizations in typical wind noise and around 105 dB re 1 µPa vessel-dominated noise?",
+          "retrieved": [
+            {
+              "chunk_id": "P03:p0006:c0001",
+              "source_id": "P03",
+              "pdf_page": 6,
+              "score": 46.912564
+            },
+            {
+              "chunk_id": "P03:p0007:c0001",
+              "source_id": "P03",
+              "pdf_page": 7,
+              "score": 41.945624
+            },
+            {
+              "chunk_id": "P03:p0010:c0001",
+              "source_id": "P03",
+              "pdf_page": 10,
+              "score": 36.939167
+            },
+            {
+              "chunk_id": "P03:p0001:c0001",
+              "source_id": "P03",
+              "pdf_page": 1,
+              "score": 36.005628
+            },
+            {
+              "chunk_id": "P03:p0006:c0002",
+              "source_id": "P03",
+              "pdf_page": 6,
+              "score": 32.542621
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "question": "What is the exact universal vessel-noise threshold above which every humpback whale becomes completely unable to communicate?",
+          "retrieved": [
+            {
+              "chunk_id": "P04:p0004:c0001",
+              "source_id": "P04",
+              "pdf_page": 4,
+              "score": 16.612834
+            },
+            {
+              "chunk_id": "P04:p0004:c0002",
+              "source_id": "P04",
+              "pdf_page": 4,
+              "score": 15.452788
+            },
+            {
+              "chunk_id": "P03:p0002:c0003",
+              "source_id": "P03",
+              "pdf_page": 2,
+              "score": 15.343582
+            },
+            {
+              "chunk_id": "P07:p0007:c0002",
+              "source_id": "P07",
+              "pdf_page": 7,
+              "score": 15.096656
+            },
+            {
+              "chunk_id": "P05:p0008:c0005",
+              "source_id": "P05",
+              "pdf_page": 8,
+              "score": 11.681294
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "question": "In Blair et al. (2016), what changes in foraging were associated with increased ship noise for tagged humpback whales?",
+          "retrieved": [
+            {
+              "chunk_id": "P04:p0001:c0001",
+              "source_id": "P04",
+              "pdf_page": 1,
+              "score": 21.280268
+            },
+            {
+              "chunk_id": "P04:p0004:c0001",
+              "source_id": "P04",
+              "pdf_page": 4,
+              "score": 15.851173
+            },
+            {
+              "chunk_id": "P04:p0005:c0002",
+              "source_id": "P04",
+              "pdf_page": 5,
+              "score": 15.768484
+            },
+            {
+              "chunk_id": "P03:p0012:c0003",
+              "source_id": "P03",
+              "pdf_page": 12,
+              "score": 15.255193
+            },
+            {
+              "chunk_id": "P01:p0004:c0004",
+              "source_id": "P01",
+              "pdf_page": 4,
+              "score": 14.96511
+            }
+          ]
+        },
+        {
+          "id": "Q09",
+          "question": "By what exact percentage did vessel-noise-related foraging disruption reduce lifetime reproductive success in both humpback whales and harbour porpoises?",
+          "retrieved": [
+            {
+              "chunk_id": "P05:p0001:c0002",
+              "source_id": "P05",
+              "pdf_page": 1,
+              "score": 14.637661
+            },
+            {
+              "chunk_id": "P05:p0006:c0002",
+              "source_id": "P05",
+              "pdf_page": 6,
+              "score": 14.497909
+            },
+            {
+              "chunk_id": "P05:p0002:c0001",
+              "source_id": "P05",
+              "pdf_page": 2,
+              "score": 14.476278
+            },
+            {
+              "chunk_id": "P02:p0009:c0001",
+              "source_id": "P02",
+              "pdf_page": 9,
+              "score": 14.185648
+            },
+            {
+              "chunk_id": "P04:p0001:c0002",
+              "source_id": "P04",
+              "pdf_page": 1,
+              "score": 13.713255
+            }
+          ]
+        },
+        {
+          "id": "Q10",
+          "question": "Following the September 2001 shipping reduction in the Bay of Fundy, what acoustic and physiological changes did Rolland et al. (2012) report?",
+          "retrieved": [
+            {
+              "chunk_id": "P06:p0003:c0004",
+              "source_id": "P06",
+              "pdf_page": 3,
+              "score": 28.282585
+            },
+            {
+              "chunk_id": "P06:p0002:c0004",
+              "source_id": "P06",
+              "pdf_page": 2,
+              "score": 24.441763
+            },
+            {
+              "chunk_id": "P06:p0003:c0003",
+              "source_id": "P06",
+              "pdf_page": 3,
+              "score": 24.369075
+            },
+            {
+              "chunk_id": "P06:p0001:c0001",
+              "source_id": "P06",
+              "pdf_page": 1,
+              "score": 22.453304
+            },
+            {
+              "chunk_id": "P06:p0002:c0001",
+              "source_id": "P06",
+              "pdf_page": 2,
+              "score": 20.647933
+            }
+          ]
+        },
+        {
+          "id": "Q12",
+          "question": "How many North Atlantic right whales died between 2001 and 2010 specifically because ship-noise-induced chronic stress caused fatal illness?",
+          "retrieved": [
+            {
+              "chunk_id": "P06:p0004:c0002",
+              "source_id": "P06",
+              "pdf_page": 4,
+              "score": 25.766002
+            },
+            {
+              "chunk_id": "P06:p0005:c0004",
+              "source_id": "P06",
+              "pdf_page": 5,
+              "score": 23.664314
+            },
+            {
+              "chunk_id": "P06:p0001:c0002",
+              "source_id": "P06",
+              "pdf_page": 1,
+              "score": 22.426194
+            },
+            {
+              "chunk_id": "P06:p0004:c0003",
+              "source_id": "P06",
+              "pdf_page": 4,
+              "score": 21.139467
+            },
+            {
+              "chunk_id": "P06:p0002:c0001",
+              "source_id": "P06",
+              "pdf_page": 2,
+              "score": 19.593039
+            }
+          ]
+        },
+        {
+          "id": "Q13",
+          "question": "In ZoBell et al. (2021), what mean differences between rewarded and control transits were reported for vessel speed, broadband source level and sound exposure level?",
+          "retrieved": [
+            {
+              "chunk_id": "P07:p0004:c0001",
+              "source_id": "P07",
+              "pdf_page": 4,
+              "score": 30.294568
+            },
+            {
+              "chunk_id": "P07:p0005:c0001",
+              "source_id": "P07",
+              "pdf_page": 5,
+              "score": 26.460458
+            },
+            {
+              "chunk_id": "P07:p0005:c0002",
+              "source_id": "P07",
+              "pdf_page": 5,
+              "score": 22.778833
+            },
+            {
+              "chunk_id": "P07:p0003:c0001",
+              "source_id": "P07",
+              "pdf_page": 3,
+              "score": 22.508907
+            },
+            {
+              "chunk_id": "P07:p0001:c0001",
+              "source_id": "P07",
+              "pdf_page": 1,
+              "score": 22.182843
+            }
+          ]
+        },
+        {
+          "id": "Q17",
+          "question": "In Marley et al. (2017), which dolphin activity states showed significantly higher average speeds at high vessel densities, and which did not?",
+          "retrieved": [
+            {
+              "chunk_id": "P02:p0002:c0004",
+              "source_id": "P02",
+              "pdf_page": 2,
+              "score": 32.419035
+            },
+            {
+              "chunk_id": "P02:p0008:c0001",
+              "source_id": "P02",
+              "pdf_page": 8,
+              "score": 27.286579
+            },
+            {
+              "chunk_id": "P02:p0007:c0001",
+              "source_id": "P02",
+              "pdf_page": 7,
+              "score": 26.430478
+            },
+            {
+              "chunk_id": "P02:p0001:c0001",
+              "source_id": "P02",
+              "pdf_page": 1,
+              "score": 22.434275
+            },
+            {
+              "chunk_id": "P02:p0011:c0002",
+              "source_id": "P02",
+              "pdf_page": 11,
+              "score": 22.030974
+            }
+          ]
+        },
+        {
+          "id": "Q19",
+          "question": "According to ZoBell et al. (2021), what participation condition was associated with significant acoustic reductions in the 2018 fleet-based speed-reduction programme?",
+          "retrieved": [
+            {
+              "chunk_id": "P07:p0001:c0001",
+              "source_id": "P07",
+              "pdf_page": 1,
+              "score": 21.847794
+            },
+            {
+              "chunk_id": "P07:p0011:c0004",
+              "source_id": "P07",
+              "pdf_page": 11,
+              "score": 18.009218
+            },
+            {
+              "chunk_id": "P08:p0007:c0002",
+              "source_id": "P08",
+              "pdf_page": 7,
+              "score": 17.786258
+            },
+            {
+              "chunk_id": "P07:p0005:c0001",
+              "source_id": "P07",
+              "pdf_page": 5,
+              "score": 17.457265
+            },
+            {
+              "chunk_id": "P08:p0010:c0005",
+              "source_id": "P08",
+              "pdf_page": 10,
+              "score": 17.374
+            }
+          ]
+        },
+        {
+          "id": "Q20",
+          "question": "In Findlay et al. (2023), by how many dB was mean cargo-vessel source level predicted to change for a 20% speed reduction?",
+          "retrieved": [
+            {
+              "chunk_id": "P08:p0005:c0003",
+              "source_id": "P08",
+              "pdf_page": 5,
+              "score": 29.853932
+            },
+            {
+              "chunk_id": "P08:p0001:c0004",
+              "source_id": "P08",
+              "pdf_page": 1,
+              "score": 28.847781
+            },
+            {
+              "chunk_id": "P08:p0007:c0004",
+              "source_id": "P08",
+              "pdf_page": 7,
+              "score": 24.030905
+            },
+            {
+              "chunk_id": "P08:p0004:c0001",
+              "source_id": "P08",
+              "pdf_page": 4,
+              "score": 23.378667
+            },
+            {
+              "chunk_id": "P08:p0003:c0004",
+              "source_id": "P08",
+              "pdf_page": 3,
+              "score": 23.248968
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "split": "dev",
+        "questions": 11,
+        "answerable_scored": 8,
+        "unsupported_not_scored": 3,
+        "top_k": 5,
+        "distinct_pages": false,
+        "mean_source_recall": 1.0,
+        "mean_direct_page_recall": 0.9375,
+        "per_question": [
+          {
+            "id": "Q01",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 1.0,
+            "gold_pages": [
+              "P01:p1"
+            ],
+            "found_pages": [
+              "P01:p1"
+            ]
+          },
+          {
+            "id": "Q04",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 1.0,
+            "gold_pages": [
+              "P03:p1",
+              "P03:p10"
+            ],
+            "found_pages": [
+              "P03:p1",
+              "P03:p10"
+            ]
+          },
+          {
+            "id": "Q06",
+            "type": "abstention",
+            "source_recall": null,
+            "page_recall": null
+          },
+          {
+            "id": "Q07",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 1.0,
+            "gold_pages": [
+              "P04:p1"
+            ],
+            "found_pages": [
+              "P04:p1"
+            ]
+          },
+          {
+            "id": "Q09",
+            "type": "abstention",
+            "source_recall": null,
+            "page_recall": null
+          },
+          {
+            "id": "Q10",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 1.0,
+            "gold_pages": [
+              "P06:p1"
+            ],
+            "found_pages": [
+              "P06:p1"
+            ]
+          },
+          {
+            "id": "Q12",
+            "type": "abstention",
+            "source_recall": null,
+            "page_recall": null
+          },
+          {
+            "id": "Q13",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 0.5,
+            "gold_pages": [
+              "P07:p2",
+              "P07:p5"
+            ],
+            "found_pages": [
+              "P07:p5"
+            ]
+          },
+          {
+            "id": "Q17",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 1.0,
+            "gold_pages": [
+              "P02:p2"
+            ],
+            "found_pages": [
+              "P02:p2"
+            ]
+          },
+          {
+            "id": "Q19",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 1.0,
+            "gold_pages": [
+              "P07:p1"
+            ],
+            "found_pages": [
+              "P07:p1"
+            ]
+          },
+          {
+            "id": "Q20",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 1.0,
+            "gold_pages": [
+              "P08:p1",
+              "P08:p3"
+            ],
+            "found_pages": [
+              "P08:p1",
+              "P08:p3"
+            ]
+          }
+        ],
+        "notes": "Dev only. Page recall uses direct supporting page labels, not exact passage match. Not answer faithfulness or abstention accuracy."
+      },
+      "support_only_page_recall": 1.0
+    },
+    "e5": {
+      "predictions": [
+        {
+          "id": "Q01",
+          "question": "How did bottlenose dolphin whistle frequencies and contour complexity change under increased ambient noise in Fouda et al. (2018)?",
+          "retrieved": [
+            {
+              "chunk_id": "P01:p0001:c0003",
+              "source_id": "P01",
+              "pdf_page": 1,
+              "score": 0.910734
+            },
+            {
+              "chunk_id": "P01:p0002:c0003",
+              "source_id": "P01",
+              "pdf_page": 2,
+              "score": 0.906506
+            },
+            {
+              "chunk_id": "P01:p0001:c0002",
+              "source_id": "P01",
+              "pdf_page": 1,
+              "score": 0.899766
+            },
+            {
+              "chunk_id": "P02:p0012:c0005",
+              "source_id": "P02",
+              "pdf_page": 12,
+              "score": 0.891829
+            },
+            {
+              "chunk_id": "P01:p0004:c0001",
+              "source_id": "P01",
+              "pdf_page": 4,
+              "score": 0.890617
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "question": "In Dunlop (2019), what were the modelled communication ranges for low-frequency humpback social vocalizations in typical wind noise and around 105 dB re 1 µPa vessel-dominated noise?",
+          "retrieved": [
+            {
+              "chunk_id": "P03:p0007:c0001",
+              "source_id": "P03",
+              "pdf_page": 7,
+              "score": 0.898592
+            },
+            {
+              "chunk_id": "P03:p0004:c0003",
+              "source_id": "P03",
+              "pdf_page": 4,
+              "score": 0.888492
+            },
+            {
+              "chunk_id": "P03:p0006:c0001",
+              "source_id": "P03",
+              "pdf_page": 6,
+              "score": 0.883675
+            },
+            {
+              "chunk_id": "P03:p0006:c0002",
+              "source_id": "P03",
+              "pdf_page": 6,
+              "score": 0.883006
+            },
+            {
+              "chunk_id": "P03:p0001:c0001",
+              "source_id": "P03",
+              "pdf_page": 1,
+              "score": 0.88092
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "question": "What is the exact universal vessel-noise threshold above which every humpback whale becomes completely unable to communicate?",
+          "retrieved": [
+            {
+              "chunk_id": "P03:p0001:c0002",
+              "source_id": "P03",
+              "pdf_page": 1,
+              "score": 0.897365
+            },
+            {
+              "chunk_id": "P03:p0010:c0001",
+              "source_id": "P03",
+              "pdf_page": 10,
+              "score": 0.892199
+            },
+            {
+              "chunk_id": "P08:p0003:c0002",
+              "source_id": "P08",
+              "pdf_page": 3,
+              "score": 0.885618
+            },
+            {
+              "chunk_id": "P03:p0002:c0002",
+              "source_id": "P03",
+              "pdf_page": 2,
+              "score": 0.884922
+            },
+            {
+              "chunk_id": "P03:p0002:c0003",
+              "source_id": "P03",
+              "pdf_page": 2,
+              "score": 0.883729
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "question": "In Blair et al. (2016), what changes in foraging were associated with increased ship noise for tagged humpback whales?",
+          "retrieved": [
+            {
+              "chunk_id": "P04:p0001:c0001",
+              "source_id": "P04",
+              "pdf_page": 1,
+              "score": 0.913703
+            },
+            {
+              "chunk_id": "P04:p0004:c0002",
+              "source_id": "P04",
+              "pdf_page": 4,
+              "score": 0.903154
+            },
+            {
+              "chunk_id": "P04:p0001:c0002",
+              "source_id": "P04",
+              "pdf_page": 1,
+              "score": 0.897561
+            },
+            {
+              "chunk_id": "P04:p0004:c0001",
+              "source_id": "P04",
+              "pdf_page": 4,
+              "score": 0.894347
+            },
+            {
+              "chunk_id": "P04:p0002:c0001",
+              "source_id": "P04",
+              "pdf_page": 2,
+              "score": 0.894169
+            }
+          ]
+        },
+        {
+          "id": "Q09",
+          "question": "By what exact percentage did vessel-noise-related foraging disruption reduce lifetime reproductive success in both humpback whales and harbour porpoises?",
+          "retrieved": [
+            {
+              "chunk_id": "P05:p0007:c0003",
+              "source_id": "P05",
+              "pdf_page": 7,
+              "score": 0.897712
+            },
+            {
+              "chunk_id": "P05:p0001:c0002",
+              "source_id": "P05",
+              "pdf_page": 1,
+              "score": 0.893001
+            },
+            {
+              "chunk_id": "P04:p0004:c0002",
+              "source_id": "P04",
+              "pdf_page": 4,
+              "score": 0.888935
+            },
+            {
+              "chunk_id": "P05:p0001:c0001",
+              "source_id": "P05",
+              "pdf_page": 1,
+              "score": 0.887275
+            },
+            {
+              "chunk_id": "P04:p0001:c0002",
+              "source_id": "P04",
+              "pdf_page": 1,
+              "score": 0.886371
+            }
+          ]
+        },
+        {
+          "id": "Q10",
+          "question": "Following the September 2001 shipping reduction in the Bay of Fundy, what acoustic and physiological changes did Rolland et al. (2012) report?",
+          "retrieved": [
+            {
+              "chunk_id": "P06:p0002:c0001",
+              "source_id": "P06",
+              "pdf_page": 2,
+              "score": 0.868752
+            },
+            {
+              "chunk_id": "P06:p0003:c0002",
+              "source_id": "P06",
+              "pdf_page": 3,
+              "score": 0.863257
+            },
+            {
+              "chunk_id": "P06:p0003:c0004",
+              "source_id": "P06",
+              "pdf_page": 3,
+              "score": 0.860275
+            },
+            {
+              "chunk_id": "P06:p0003:c0003",
+              "source_id": "P06",
+              "pdf_page": 3,
+              "score": 0.85552
+            },
+            {
+              "chunk_id": "P06:p0004:c0002",
+              "source_id": "P06",
+              "pdf_page": 4,
+              "score": 0.850387
+            }
+          ]
+        },
+        {
+          "id": "Q12",
+          "question": "How many North Atlantic right whales died between 2001 and 2010 specifically because ship-noise-induced chronic stress caused fatal illness?",
+          "retrieved": [
+            {
+              "chunk_id": "P06:p0002:c0001",
+              "source_id": "P06",
+              "pdf_page": 2,
+              "score": 0.890887
+            },
+            {
+              "chunk_id": "P06:p0004:c0002",
+              "source_id": "P06",
+              "pdf_page": 4,
+              "score": 0.890636
+            },
+            {
+              "chunk_id": "P06:p0004:c0003",
+              "source_id": "P06",
+              "pdf_page": 4,
+              "score": 0.885901
+            },
+            {
+              "chunk_id": "P06:p0003:c0004",
+              "source_id": "P06",
+              "pdf_page": 3,
+              "score": 0.883772
+            },
+            {
+              "chunk_id": "P06:p0001:c0002",
+              "source_id": "P06",
+              "pdf_page": 1,
+              "score": 0.881896
+            }
+          ]
+        },
+        {
+          "id": "Q13",
+          "question": "In ZoBell et al. (2021), what mean differences between rewarded and control transits were reported for vessel speed, broadband source level and sound exposure level?",
+          "retrieved": [
+            {
+              "chunk_id": "P07:p0005:c0003",
+              "source_id": "P07",
+              "pdf_page": 5,
+              "score": 0.88375
+            },
+            {
+              "chunk_id": "P07:p0011:c0001",
+              "source_id": "P07",
+              "pdf_page": 11,
+              "score": 0.881824
+            },
+            {
+              "chunk_id": "P07:p0005:c0001",
+              "source_id": "P07",
+              "pdf_page": 5,
+              "score": 0.879128
+            },
+            {
+              "chunk_id": "P07:p0004:c0002",
+              "source_id": "P07",
+              "pdf_page": 4,
+              "score": 0.877988
+            },
+            {
+              "chunk_id": "P07:p0004:c0001",
+              "source_id": "P07",
+              "pdf_page": 4,
+              "score": 0.874533
+            }
+          ]
+        },
+        {
+          "id": "Q17",
+          "question": "In Marley et al. (2017), which dolphin activity states showed significantly higher average speeds at high vessel densities, and which did not?",
+          "retrieved": [
+            {
+              "chunk_id": "P02:p0002:c0004",
+              "source_id": "P02",
+              "pdf_page": 2,
+              "score": 0.905706
+            },
+            {
+              "chunk_id": "P02:p0008:c0001",
+              "source_id": "P02",
+              "pdf_page": 8,
+              "score": 0.890721
+            },
+            {
+              "chunk_id": "P02:p0011:c0002",
+              "source_id": "P02",
+              "pdf_page": 11,
+              "score": 0.887336
+            },
+            {
+              "chunk_id": "P02:p0003:c0001",
+              "source_id": "P02",
+              "pdf_page": 3,
+              "score": 0.886088
+            },
+            {
+              "chunk_id": "P02:p0009:c0001",
+              "source_id": "P02",
+              "pdf_page": 9,
+              "score": 0.880563
+            }
+          ]
+        },
+        {
+          "id": "Q19",
+          "question": "According to ZoBell et al. (2021), what participation condition was associated with significant acoustic reductions in the 2018 fleet-based speed-reduction programme?",
+          "retrieved": [
+            {
+              "chunk_id": "P07:p0008:c0001",
+              "source_id": "P07",
+              "pdf_page": 8,
+              "score": 0.846904
+            },
+            {
+              "chunk_id": "P08:p0004:c0001",
+              "source_id": "P08",
+              "pdf_page": 4,
+              "score": 0.837052
+            },
+            {
+              "chunk_id": "P08:p0007:c0002",
+              "source_id": "P08",
+              "pdf_page": 7,
+              "score": 0.836778
+            },
+            {
+              "chunk_id": "P07:p0010:c0003",
+              "source_id": "P07",
+              "pdf_page": 10,
+              "score": 0.836667
+            },
+            {
+              "chunk_id": "P08:p0010:c0005",
+              "source_id": "P08",
+              "pdf_page": 10,
+              "score": 0.834711
+            }
+          ]
+        },
+        {
+          "id": "Q20",
+          "question": "In Findlay et al. (2023), by how many dB was mean cargo-vessel source level predicted to change for a 20% speed reduction?",
+          "retrieved": [
+            {
+              "chunk_id": "P08:p0003:c0004",
+              "source_id": "P08",
+              "pdf_page": 3,
+              "score": 0.87854
+            },
+            {
+              "chunk_id": "P08:p0004:c0001",
+              "source_id": "P08",
+              "pdf_page": 4,
+              "score": 0.87299
+            },
+            {
+              "chunk_id": "P08:p0007:c0002",
+              "source_id": "P08",
+              "pdf_page": 7,
+              "score": 0.865866
+            },
+            {
+              "chunk_id": "P08:p0005:c0003",
+              "source_id": "P08",
+              "pdf_page": 5,
+              "score": 0.864447
+            },
+            {
+              "chunk_id": "P08:p0008:c0002",
+              "source_id": "P08",
+              "pdf_page": 8,
+              "score": 0.863747
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "split": "dev",
+        "questions": 11,
+        "answerable_scored": 8,
+        "unsupported_not_scored": 3,
+        "top_k": 5,
+        "distinct_pages": false,
+        "mean_source_recall": 1.0,
+        "mean_direct_page_recall": 0.5625,
+        "per_question": [
+          {
+            "id": "Q01",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 1.0,
+            "gold_pages": [
+              "P01:p1"
+            ],
+            "found_pages": [
+              "P01:p1"
+            ]
+          },
+          {
+            "id": "Q04",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 0.5,
+            "gold_pages": [
+              "P03:p1",
+              "P03:p10"
+            ],
+            "found_pages": [
+              "P03:p1"
+            ]
+          },
+          {
+            "id": "Q06",
+            "type": "abstention",
+            "source_recall": null,
+            "page_recall": null
+          },
+          {
+            "id": "Q07",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 1.0,
+            "gold_pages": [
+              "P04:p1"
+            ],
+            "found_pages": [
+              "P04:p1"
+            ]
+          },
+          {
+            "id": "Q09",
+            "type": "abstention",
+            "source_recall": null,
+            "page_recall": null
+          },
+          {
+            "id": "Q10",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 0.0,
+            "gold_pages": [
+              "P06:p1"
+            ],
+            "found_pages": []
+          },
+          {
+            "id": "Q12",
+            "type": "abstention",
+            "source_recall": null,
+            "page_recall": null
+          },
+          {
+            "id": "Q13",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 0.5,
+            "gold_pages": [
+              "P07:p2",
+              "P07:p5"
+            ],
+            "found_pages": [
+              "P07:p5"
+            ]
+          },
+          {
+            "id": "Q17",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 1.0,
+            "gold_pages": [
+              "P02:p2"
+            ],
+            "found_pages": [
+              "P02:p2"
+            ]
+          },
+          {
+            "id": "Q19",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 0.0,
+            "gold_pages": [
+              "P07:p1"
+            ],
+            "found_pages": []
+          },
+          {
+            "id": "Q20",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 0.5,
+            "gold_pages": [
+              "P08:p1",
+              "P08:p3"
+            ],
+            "found_pages": [
+              "P08:p3"
+            ]
+          }
+        ],
+        "notes": "Dev only. Page recall uses direct supporting page labels, not exact passage match. Not answer faithfulness or abstention accuracy."
+      },
+      "support_only_page_recall": 0.6875
+    },
+    "gte": {
+      "predictions": [
+        {
+          "id": "Q01",
+          "question": "How did bottlenose dolphin whistle frequencies and contour complexity change under increased ambient noise in Fouda et al. (2018)?",
+          "retrieved": [
+            {
+              "chunk_id": "P01:p0001:c0002",
+              "source_id": "P01",
+              "pdf_page": 1,
+              "score": 0.868826
+            },
+            {
+              "chunk_id": "P02:p0012:c0005",
+              "source_id": "P02",
+              "pdf_page": 12,
+              "score": 0.866182
+            },
+            {
+              "chunk_id": "P02:p0012:c0001",
+              "source_id": "P02",
+              "pdf_page": 12,
+              "score": 0.862403
+            },
+            {
+              "chunk_id": "P01:p0004:c0001",
+              "source_id": "P01",
+              "pdf_page": 4,
+              "score": 0.849165
+            },
+            {
+              "chunk_id": "P01:p0004:c0004",
+              "source_id": "P01",
+              "pdf_page": 4,
+              "score": 0.849064
+            }
+          ]
+        },
+        {
+          "id": "Q04",
+          "question": "In Dunlop (2019), what were the modelled communication ranges for low-frequency humpback social vocalizations in typical wind noise and around 105 dB re 1 µPa vessel-dominated noise?",
+          "retrieved": [
+            {
+              "chunk_id": "P03:p0002:c0002",
+              "source_id": "P03",
+              "pdf_page": 2,
+              "score": 0.860745
+            },
+            {
+              "chunk_id": "P03:p0006:c0001",
+              "source_id": "P03",
+              "pdf_page": 6,
+              "score": 0.843118
+            },
+            {
+              "chunk_id": "P03:p0002:c0003",
+              "source_id": "P03",
+              "pdf_page": 2,
+              "score": 0.840103
+            },
+            {
+              "chunk_id": "P03:p0012:c0001",
+              "source_id": "P03",
+              "pdf_page": 12,
+              "score": 0.835234
+            },
+            {
+              "chunk_id": "P03:p0010:c0001",
+              "source_id": "P03",
+              "pdf_page": 10,
+              "score": 0.833337
+            }
+          ]
+        },
+        {
+          "id": "Q06",
+          "question": "What is the exact universal vessel-noise threshold above which every humpback whale becomes completely unable to communicate?",
+          "retrieved": [
+            {
+              "chunk_id": "P03:p0010:c0001",
+              "source_id": "P03",
+              "pdf_page": 10,
+              "score": 0.829269
+            },
+            {
+              "chunk_id": "P03:p0009:c0002",
+              "source_id": "P03",
+              "pdf_page": 9,
+              "score": 0.816806
+            },
+            {
+              "chunk_id": "P03:p0010:c0002",
+              "source_id": "P03",
+              "pdf_page": 10,
+              "score": 0.815369
+            },
+            {
+              "chunk_id": "P03:p0001:c0001",
+              "source_id": "P03",
+              "pdf_page": 1,
+              "score": 0.812126
+            },
+            {
+              "chunk_id": "P03:p0001:c0002",
+              "source_id": "P03",
+              "pdf_page": 1,
+              "score": 0.810189
+            }
+          ]
+        },
+        {
+          "id": "Q07",
+          "question": "In Blair et al. (2016), what changes in foraging were associated with increased ship noise for tagged humpback whales?",
+          "retrieved": [
+            {
+              "chunk_id": "P04:p0001:c0001",
+              "source_id": "P04",
+              "pdf_page": 1,
+              "score": 0.90364
+            },
+            {
+              "chunk_id": "P08:p0009:c0004",
+              "source_id": "P08",
+              "pdf_page": 9,
+              "score": 0.901872
+            },
+            {
+              "chunk_id": "P04:p0002:c0001",
+              "source_id": "P04",
+              "pdf_page": 2,
+              "score": 0.89482
+            },
+            {
+              "chunk_id": "P04:p0004:c0001",
+              "source_id": "P04",
+              "pdf_page": 4,
+              "score": 0.880635
+            },
+            {
+              "chunk_id": "P05:p0001:c0002",
+              "source_id": "P05",
+              "pdf_page": 1,
+              "score": 0.877077
+            }
+          ]
+        },
+        {
+          "id": "Q09",
+          "question": "By what exact percentage did vessel-noise-related foraging disruption reduce lifetime reproductive success in both humpback whales and harbour porpoises?",
+          "retrieved": [
+            {
+              "chunk_id": "P08:p0009:c0004",
+              "source_id": "P08",
+              "pdf_page": 9,
+              "score": 0.872568
+            },
+            {
+              "chunk_id": "P05:p0006:c0002",
+              "source_id": "P05",
+              "pdf_page": 6,
+              "score": 0.86486
+            },
+            {
+              "chunk_id": "P05:p0006:c0004",
+              "source_id": "P05",
+              "pdf_page": 6,
+              "score": 0.855208
+            },
+            {
+              "chunk_id": "P05:p0002:c0001",
+              "source_id": "P05",
+              "pdf_page": 2,
+              "score": 0.853595
+            },
+            {
+              "chunk_id": "P05:p0007:c0003",
+              "source_id": "P05",
+              "pdf_page": 7,
+              "score": 0.850938
+            }
+          ]
+        },
+        {
+          "id": "Q10",
+          "question": "Following the September 2001 shipping reduction in the Bay of Fundy, what acoustic and physiological changes did Rolland et al. (2012) report?",
+          "retrieved": [
+            {
+              "chunk_id": "P06:p0003:c0004",
+              "source_id": "P06",
+              "pdf_page": 3,
+              "score": 0.768674
+            },
+            {
+              "chunk_id": "P08:p0009:c0004",
+              "source_id": "P08",
+              "pdf_page": 9,
+              "score": 0.755747
+            },
+            {
+              "chunk_id": "P06:p0004:c0002",
+              "source_id": "P06",
+              "pdf_page": 4,
+              "score": 0.752679
+            },
+            {
+              "chunk_id": "P06:p0002:c0001",
+              "source_id": "P06",
+              "pdf_page": 2,
+              "score": 0.751729
+            },
+            {
+              "chunk_id": "P04:p0004:c0005",
+              "source_id": "P04",
+              "pdf_page": 4,
+              "score": 0.751492
+            }
+          ]
+        },
+        {
+          "id": "Q12",
+          "question": "How many North Atlantic right whales died between 2001 and 2010 specifically because ship-noise-induced chronic stress caused fatal illness?",
+          "retrieved": [
+            {
+              "chunk_id": "P06:p0004:c0002",
+              "source_id": "P06",
+              "pdf_page": 4,
+              "score": 0.844877
+            },
+            {
+              "chunk_id": "P06:p0001:c0001",
+              "source_id": "P06",
+              "pdf_page": 1,
+              "score": 0.828254
+            },
+            {
+              "chunk_id": "P06:p0002:c0001",
+              "source_id": "P06",
+              "pdf_page": 2,
+              "score": 0.825487
+            },
+            {
+              "chunk_id": "P06:p0001:c0002",
+              "source_id": "P06",
+              "pdf_page": 1,
+              "score": 0.800914
+            },
+            {
+              "chunk_id": "P04:p0004:c0005",
+              "source_id": "P04",
+              "pdf_page": 4,
+              "score": 0.796974
+            }
+          ]
+        },
+        {
+          "id": "Q13",
+          "question": "In ZoBell et al. (2021), what mean differences between rewarded and control transits were reported for vessel speed, broadband source level and sound exposure level?",
+          "retrieved": [
+            {
+              "chunk_id": "P07:p0004:c0001",
+              "source_id": "P07",
+              "pdf_page": 4,
+              "score": 0.805051
+            },
+            {
+              "chunk_id": "P07:p0005:c0001",
+              "source_id": "P07",
+              "pdf_page": 5,
+              "score": 0.792605
+            },
+            {
+              "chunk_id": "P07:p0004:c0002",
+              "source_id": "P07",
+              "pdf_page": 4,
+              "score": 0.790237
+            },
+            {
+              "chunk_id": "P07:p0010:c0001",
+              "source_id": "P07",
+              "pdf_page": 10,
+              "score": 0.773491
+            },
+            {
+              "chunk_id": "P07:p0008:c0001",
+              "source_id": "P07",
+              "pdf_page": 8,
+              "score": 0.768954
+            }
+          ]
+        },
+        {
+          "id": "Q17",
+          "question": "In Marley et al. (2017), which dolphin activity states showed significantly higher average speeds at high vessel densities, and which did not?",
+          "retrieved": [
+            {
+              "chunk_id": "P02:p0002:c0004",
+              "source_id": "P02",
+              "pdf_page": 2,
+              "score": 0.86496
+            },
+            {
+              "chunk_id": "P02:p0003:c0001",
+              "source_id": "P02",
+              "pdf_page": 3,
+              "score": 0.862378
+            },
+            {
+              "chunk_id": "P02:p0008:c0001",
+              "source_id": "P02",
+              "pdf_page": 8,
+              "score": 0.853617
+            },
+            {
+              "chunk_id": "P02:p0011:c0001",
+              "source_id": "P02",
+              "pdf_page": 11,
+              "score": 0.832004
+            },
+            {
+              "chunk_id": "P02:p0007:c0001",
+              "source_id": "P02",
+              "pdf_page": 7,
+              "score": 0.808559
+            }
+          ]
+        },
+        {
+          "id": "Q19",
+          "question": "According to ZoBell et al. (2021), what participation condition was associated with significant acoustic reductions in the 2018 fleet-based speed-reduction programme?",
+          "retrieved": [
+            {
+              "chunk_id": "P07:p0008:c0001",
+              "source_id": "P07",
+              "pdf_page": 8,
+              "score": 0.799243
+            },
+            {
+              "chunk_id": "P08:p0004:c0001",
+              "source_id": "P08",
+              "pdf_page": 4,
+              "score": 0.778589
+            },
+            {
+              "chunk_id": "P07:p0007:c0003",
+              "source_id": "P07",
+              "pdf_page": 7,
+              "score": 0.763375
+            },
+            {
+              "chunk_id": "P07:p0010:c0001",
+              "source_id": "P07",
+              "pdf_page": 10,
+              "score": 0.762878
+            },
+            {
+              "chunk_id": "P07:p0005:c0003",
+              "source_id": "P07",
+              "pdf_page": 5,
+              "score": 0.759779
+            }
+          ]
+        },
+        {
+          "id": "Q20",
+          "question": "In Findlay et al. (2023), by how many dB was mean cargo-vessel source level predicted to change for a 20% speed reduction?",
+          "retrieved": [
+            {
+              "chunk_id": "P08:p0003:c0004",
+              "source_id": "P08",
+              "pdf_page": 3,
+              "score": 0.837773
+            },
+            {
+              "chunk_id": "P08:p0004:c0001",
+              "source_id": "P08",
+              "pdf_page": 4,
+              "score": 0.819828
+            },
+            {
+              "chunk_id": "P07:p0008:c0001",
+              "source_id": "P07",
+              "pdf_page": 8,
+              "score": 0.795181
+            },
+            {
+              "chunk_id": "P08:p0007:c0002",
+              "source_id": "P08",
+              "pdf_page": 7,
+              "score": 0.792202
+            },
+            {
+              "chunk_id": "P08:p0010:c0004",
+              "source_id": "P08",
+              "pdf_page": 10,
+              "score": 0.789761
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "split": "dev",
+        "questions": 11,
+        "answerable_scored": 8,
+        "unsupported_not_scored": 3,
+        "top_k": 5,
+        "distinct_pages": false,
+        "mean_source_recall": 1.0,
+        "mean_direct_page_recall": 0.5625,
+        "per_question": [
+          {
+            "id": "Q01",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 1.0,
+            "gold_pages": [
+              "P01:p1"
+            ],
+            "found_pages": [
+              "P01:p1"
+            ]
+          },
+          {
+            "id": "Q04",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 0.5,
+            "gold_pages": [
+              "P03:p1",
+              "P03:p10"
+            ],
+            "found_pages": [
+              "P03:p10"
+            ]
+          },
+          {
+            "id": "Q06",
+            "type": "abstention",
+            "source_recall": null,
+            "page_recall": null
+          },
+          {
+            "id": "Q07",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 1.0,
+            "gold_pages": [
+              "P04:p1"
+            ],
+            "found_pages": [
+              "P04:p1"
+            ]
+          },
+          {
+            "id": "Q09",
+            "type": "abstention",
+            "source_recall": null,
+            "page_recall": null
+          },
+          {
+            "id": "Q10",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 0.0,
+            "gold_pages": [
+              "P06:p1"
+            ],
+            "found_pages": []
+          },
+          {
+            "id": "Q12",
+            "type": "abstention",
+            "source_recall": null,
+            "page_recall": null
+          },
+          {
+            "id": "Q13",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 0.5,
+            "gold_pages": [
+              "P07:p2",
+              "P07:p5"
+            ],
+            "found_pages": [
+              "P07:p5"
+            ]
+          },
+          {
+            "id": "Q17",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 1.0,
+            "gold_pages": [
+              "P02:p2"
+            ],
+            "found_pages": [
+              "P02:p2"
+            ]
+          },
+          {
+            "id": "Q19",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 0.0,
+            "gold_pages": [
+              "P07:p1"
+            ],
+            "found_pages": []
+          },
+          {
+            "id": "Q20",
+            "type": "fact",
+            "source_recall": 1.0,
+            "page_recall": 0.5,
+            "gold_pages": [
+              "P08:p1",
+              "P08:p3"
+            ],
+            "found_pages": [
+              "P08:p3"
+            ]
+          }
+        ],
+        "notes": "Dev only. Page recall uses direct supporting page labels, not exact passage match. Not answer faithfulness or abstention accuracy."
+      },
+      "support_only_page_recall": 0.6875
+    }
+  },
+  "per_question": [
+    {
+      "id": "Q01",
+      "task_type": "fact",
+      "gold_pages": [
+        "P01:p1"
+      ],
+      "bm25": {
+        "source_recall": 1.0,
+        "page_recall": 1.0,
+        "found_pages": [
+          "P01:p1"
+        ],
+        "support_only_page_recall": 1.0
+      },
+      "e5": {
+        "source_recall": 1.0,
+        "page_recall": 1.0,
+        "found_pages": [
+          "P01:p1"
+        ],
+        "support_only_page_recall": 1.0
+      },
+      "gte": {
+        "source_recall": 1.0,
+        "page_recall": 1.0,
+        "found_pages": [
+          "P01:p1"
+        ],
+        "support_only_page_recall": 1.0
+      }
+    },
+    {
+      "id": "Q04",
+      "task_type": "fact",
+      "gold_pages": [
+        "P03:p1",
+        "P03:p10"
+      ],
+      "bm25": {
+        "source_recall": 1.0,
+        "page_recall": 1.0,
+        "found_pages": [
+          "P03:p1",
+          "P03:p10"
+        ],
+        "support_only_page_recall": 1.0
+      },
+      "e5": {
+        "source_recall": 1.0,
+        "page_recall": 0.5,
+        "found_pages": [
+          "P03:p1"
+        ],
+        "support_only_page_recall": 0.5
+      },
+      "gte": {
+        "source_recall": 1.0,
+        "page_recall": 0.5,
+        "found_pages": [
+          "P03:p10"
+        ],
+        "support_only_page_recall": 0.5
+      }
+    },
+    {
+      "id": "Q06",
+      "task_type": "abstention",
+      "gold_pages": [],
+      "bm25": {
+        "source_recall": null,
+        "page_recall": null,
+        "found_pages": [],
+        "support_only_page_recall": null
+      },
+      "e5": {
+        "source_recall": null,
+        "page_recall": null,
+        "found_pages": [],
+        "support_only_page_recall": null
+      },
+      "gte": {
+        "source_recall": null,
+        "page_recall": null,
+        "found_pages": [],
+        "support_only_page_recall": null
+      }
+    },
+    {
+      "id": "Q07",
+      "task_type": "fact",
+      "gold_pages": [
+        "P04:p1"
+      ],
+      "bm25": {
+        "source_recall": 1.0,
+        "page_recall": 1.0,
+        "found_pages": [
+          "P04:p1"
+        ],
+        "support_only_page_recall": 1.0
+      },
+      "e5": {
+        "source_recall": 1.0,
+        "page_recall": 1.0,
+        "found_pages": [
+          "P04:p1"
+        ],
+        "support_only_page_recall": 1.0
+      },
+      "gte": {
+        "source_recall": 1.0,
+        "page_recall": 1.0,
+        "found_pages": [
+          "P04:p1"
+        ],
+        "support_only_page_recall": 1.0
+      }
+    },
+    {
+      "id": "Q09",
+      "task_type": "abstention",
+      "gold_pages": [],
+      "bm25": {
+        "source_recall": null,
+        "page_recall": null,
+        "found_pages": [],
+        "support_only_page_recall": null
+      },
+      "e5": {
+        "source_recall": null,
+        "page_recall": null,
+        "found_pages": [],
+        "support_only_page_recall": null
+      },
+      "gte": {
+        "source_recall": null,
+        "page_recall": null,
+        "found_pages": [],
+        "support_only_page_recall": null
+      }
+    },
+    {
+      "id": "Q10",
+      "task_type": "fact",
+      "gold_pages": [
+        "P06:p1"
+      ],
+      "bm25": {
+        "source_recall": 1.0,
+        "page_recall": 1.0,
+        "found_pages": [
+          "P06:p1"
+        ],
+        "support_only_page_recall": 1.0
+      },
+      "e5": {
+        "source_recall": 1.0,
+        "page_recall": 0.0,
+        "found_pages": [],
+        "support_only_page_recall": 0.0
+      },
+      "gte": {
+        "source_recall": 1.0,
+        "page_recall": 0.0,
+        "found_pages": [],
+        "support_only_page_recall": 0.0
+      }
+    },
+    {
+      "id": "Q12",
+      "task_type": "abstention",
+      "gold_pages": [],
+      "bm25": {
+        "source_recall": null,
+        "page_recall": null,
+        "found_pages": [],
+        "support_only_page_recall": null
+      },
+      "e5": {
+        "source_recall": null,
+        "page_recall": null,
+        "found_pages": [],
+        "support_only_page_recall": null
+      },
+      "gte": {
+        "source_recall": null,
+        "page_recall": null,
+        "found_pages": [],
+        "support_only_page_recall": null
+      }
+    },
+    {
+      "id": "Q13",
+      "task_type": "fact",
+      "gold_pages": [
+        "P07:p2",
+        "P07:p5"
+      ],
+      "bm25": {
+        "source_recall": 1.0,
+        "page_recall": 0.5,
+        "found_pages": [
+          "P07:p5"
+        ],
+        "support_only_page_recall": 1.0
+      },
+      "e5": {
+        "source_recall": 1.0,
+        "page_recall": 0.5,
+        "found_pages": [
+          "P07:p5"
+        ],
+        "support_only_page_recall": 1.0
+      },
+      "gte": {
+        "source_recall": 1.0,
+        "page_recall": 0.5,
+        "found_pages": [
+          "P07:p5"
+        ],
+        "support_only_page_recall": 1.0
+      }
+    },
+    {
+      "id": "Q17",
+      "task_type": "fact",
+      "gold_pages": [
+        "P02:p2"
+      ],
+      "bm25": {
+        "source_recall": 1.0,
+        "page_recall": 1.0,
+        "found_pages": [
+          "P02:p2"
+        ],
+        "support_only_page_recall": 1.0
+      },
+      "e5": {
+        "source_recall": 1.0,
+        "page_recall": 1.0,
+        "found_pages": [
+          "P02:p2"
+        ],
+        "support_only_page_recall": 1.0
+      },
+      "gte": {
+        "source_recall": 1.0,
+        "page_recall": 1.0,
+        "found_pages": [
+          "P02:p2"
+        ],
+        "support_only_page_recall": 1.0
+      }
+    },
+    {
+      "id": "Q19",
+      "task_type": "fact",
+      "gold_pages": [
+        "P07:p1"
+      ],
+      "bm25": {
+        "source_recall": 1.0,
+        "page_recall": 1.0,
+        "found_pages": [
+          "P07:p1"
+        ],
+        "support_only_page_recall": 1.0
+      },
+      "e5": {
+        "source_recall": 1.0,
+        "page_recall": 0.0,
+        "found_pages": [],
+        "support_only_page_recall": 0.0
+      },
+      "gte": {
+        "source_recall": 1.0,
+        "page_recall": 0.0,
+        "found_pages": [],
+        "support_only_page_recall": 0.0
+      }
+    },
+    {
+      "id": "Q20",
+      "task_type": "fact",
+      "gold_pages": [
+        "P08:p1",
+        "P08:p3"
+      ],
+      "bm25": {
+        "source_recall": 1.0,
+        "page_recall": 1.0,
+        "found_pages": [
+          "P08:p1",
+          "P08:p3"
+        ],
+        "support_only_page_recall": 1.0
+      },
+      "e5": {
+        "source_recall": 1.0,
+        "page_recall": 0.5,
+        "found_pages": [
+          "P08:p3"
+        ],
+        "support_only_page_recall": 1.0
+      },
+      "gte": {
+        "source_recall": 1.0,
+        "page_recall": 0.5,
+        "found_pages": [
+          "P08:p3"
+        ],
+        "support_only_page_recall": 1.0
+      }
+    }
+  ],
+  "q13_rank_diagnostic_top30": {
+    "gold_pages_and_roles": [
+      {
+        "page": "P07:p5",
+        "role": "support"
+      },
+      {
+        "page": "P07:p2",
+        "role": "method"
+      }
+    ],
+    "bm25": {
+      "P07:p2": 23,
+      "P07:p5": 2
+    },
+    "e5": {
+      "P07:p2": 26,
+      "P07:p5": 1
+    },
+    "gte": {
+      "P07:p2": 15,
+      "P07:p5": 2
+    }
+  },
+  "note": "DEV only; page recall is not quote recall, citation validity, or generation quality."
+}
