@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: marine-evidence-finder
+Version: 0.1.0
+Summary: Evidence-grounded marine science RAG prototype
+Requires-Python: >=3.10
+Requires-Dist: pymupdf<2,>=1.24
+Provides-Extra: dev
+Requires-Dist: pytest<10,>=8; extra == "dev"
