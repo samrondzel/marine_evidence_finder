@@ -1,0 +1,10 @@
+**
+!requirements-db.txt
+!alembic.ini
+!migrations/
+!migrations/**
+!src/
+!src/marine_evidence/
+!src/marine_evidence/__init__.py
+!src/marine_evidence/db_models.py
+!src/marine_evidence/db_connection.py

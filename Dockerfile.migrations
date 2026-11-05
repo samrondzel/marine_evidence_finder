@@ -1,0 +1,13 @@
+FROM python:3.11-slim-bookworm
+
+WORKDIR /app
+COPY requirements-db.txt ./requirements-db.txt
+RUN pip install --no-cache-dir -r requirements-db.txt \
+    && groupadd --system app && useradd --system --gid app --home-dir /app app
+COPY alembic.ini ./alembic.ini
+COPY migrations/ ./migrations/
+COPY src/marine_evidence/__init__.py ./src/marine_evidence/__init__.py
+COPY src/marine_evidence/db_models.py ./src/marine_evidence/db_models.py
+COPY src/marine_evidence/db_connection.py ./src/marine_evidence/db_connection.py
+USER app
+CMD ["alembic", "-c", "alembic.ini", "upgrade", "head"]

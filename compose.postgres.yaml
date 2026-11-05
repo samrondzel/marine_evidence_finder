@@ -1,0 +1,36 @@
+# Optional additive overlay; run together with your existing compose.yaml.
+# No exposed DB port: other Compose services access `db:5432` internally.
+services:
+  db:
+    image: postgres:16-bookworm
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${MARINE_DB_NAME:-marine_evidence}
+      POSTGRES_USER: ${MARINE_DB_USER:-marine_evidence}
+      POSTGRES_PASSWORD: ${MARINE_DB_PASSWORD:?Set MARINE_DB_PASSWORD in your local .env file}
+    volumes:
+      - marine_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$$POSTGRES_USER\" -d \"$$POSTGRES_DB\""]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+
+  db-migrate:
+    build:
+      context: .
+      dockerfile: Dockerfile.migrations
+    profiles: ["tools"]
+    environment:
+      PGHOST: db
+      PGPORT: "5432"
+      PGDATABASE: ${MARINE_DB_NAME:-marine_evidence}
+      PGUSER: ${MARINE_DB_USER:-marine_evidence}
+      PGPASSWORD: ${MARINE_DB_PASSWORD:?Set MARINE_DB_PASSWORD in your local .env file}
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  marine_pgdata:
