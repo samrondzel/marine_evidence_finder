@@ -2,10 +2,11 @@
 from __future__ import annotations
 
 import os
-from urllib.parse import quote
 
 import requests
 import streamlit as st
+
+from marine_evidence.ui_urls import pdf_link
 
 st.set_page_config(page_title='Marine Evidence Finder', page_icon='🐋', layout='wide')
 API_URL = os.environ.get('MARINE_API_URL', 'http://127.0.0.1:8000').rstrip('/')
@@ -20,10 +21,6 @@ def api_request(method: str, path: str, **kwargs):
             details = response.text
         raise RuntimeError(f'API HTTP {response.status_code}: {details}')
     return response.json()
-
-
-def pdf_link(source_id: str, page: int = 1) -> str:
-    return f'{API_URL}/documents/{quote(source_id, safe="")}/pdf#page={int(page)}'
 
 
 st.title('🐋 Marine Evidence Finder')

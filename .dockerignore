@@ -1,0 +1,18 @@
+# Nothing personal, generated, benchmark-related or heavy goes into images.
+.env
+.env.*
+!.env.example
+.venv/
+.git/
+.pytest_cache/
+**/__pycache__/
+**/*.py[cod]
+*.zip
+papers/
+data/
+evaluation/
+notes/
+tests/
+scripts/
+README*.md
+*.log

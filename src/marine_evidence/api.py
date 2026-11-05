@@ -8,7 +8,7 @@ from __future__ import annotations
 import os
 from contextlib import asynccontextmanager
 from pathlib import Path
-from typing import Annotated
+from typing import Annotated, Literal
 
 from fastapi import FastAPI, File, HTTPException, Request, UploadFile
 from fastapi.concurrency import run_in_threadpool
@@ -17,6 +17,7 @@ from pydantic import BaseModel, Field
 
 from .answer import AnswerError, answer_question
 from .corpus_store import CorpusStore, DocumentError, MAX_UPLOAD_BYTES
+from .config import AppPaths
 
 
 class Query(BaseModel):
@@ -29,10 +30,45 @@ class AskQuery(Query):
     model: str = Field(default='gpt-5-mini', min_length=1, max_length=120)
 
 
+class HealthResponse(BaseModel):
+    status: Literal['ok']
+    documents: int = Field(ge=0)
+    chunks: int = Field(ge=0)
+    retriever: Literal['bm25']
+
+
+class SearchHit(BaseModel):
+    rank: int = Field(ge=1)
+    score: float
+    chunk_id: str
+    source_id: str
+    pdf_page: int = Field(ge=1)
+    title: str
+    filename: str
+    doi: str
+    text: str
+
+
+class SearchResponse(BaseModel):
+    question: str
+    hits: list[SearchHit]
+    total: int = Field(ge=0)
+    retriever: Literal['bm25']
+
+
 def create_app(*, store: CorpusStore | None = None, root: Path | None = None) -> FastAPI:
     @asynccontextmanager
     async def lifespan(api: FastAPI):
-        api.state.store = store if store is not None else CorpusStore.from_project(root or Path.cwd())
+        if store is not None:
+            api.state.store = store
+        else:
+            paths = AppPaths.from_environment(root)
+            api.state.store = CorpusStore(
+                base_chunks_path=paths.base_chunks_path,
+                base_papers_dir=paths.base_papers_dir,
+                uploads_dir=paths.uploads_dir,
+                base_manifest_path=paths.base_manifest_path,
+            )
         yield
 
     api = FastAPI(title='Marine Evidence Finder', version='0.2.0', lifespan=lifespan,
@@ -41,11 +77,23 @@ def create_app(*, store: CorpusStore | None = None, root: Path | None = None) ->
     def collection(request: Request) -> CorpusStore:
         return request.app.state.store
 
-    @api.get('/health')
+    @api.get('/health', response_model=HealthResponse)
     def health(request: Request):
         s = collection(request)
         return {'status': 'ok', 'documents': len(s.list_documents()), 'chunks': s.chunk_count,
                 'retriever': 'bm25'}
+
+    @api.get('/health/live')
+    def live():
+        # Liveness must not perform disk access, DB queries or LLM calls.
+        return {'status': 'alive'}
+
+    @api.get('/health/ready')
+    def ready(request: Request):
+        # For now, successful store initialization is the readiness condition.
+        # When PostgreSQL is introduced, extend this to verify DB availability.
+        s = collection(request)
+        return {'status': 'ready', 'chunks': s.chunk_count}
 
     @api.get('/documents')
     def documents(request: Request):
@@ -85,7 +133,7 @@ def create_app(*, store: CorpusStore | None = None, root: Path | None = None) ->
         return FileResponse(path, media_type='application/pdf', filename=filename,
                             content_disposition_type='inline', headers={'X-Content-Type-Options': 'nosniff'})
 
-    @api.post('/search')
+    @api.post('/search', response_model=SearchResponse)
     def search(request: Request, q: Query):
         hits = collection(request).search(q.question, top_k=q.top_k, distinct_pages=q.distinct_pages)
         return {'question': q.question, 'hits': hits, 'total': len(hits), 'retriever': 'bm25'}
