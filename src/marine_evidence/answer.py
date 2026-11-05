@@ -25,6 +25,8 @@ Rules:
   claims=[], and a short reason explaining what evidence is missing.
 - For status=answered, use concise, substantive claims. Every claim MUST have at least one supporting
   citation_ids item, copied EXACTLY from the supplied chunk_id values. Cite multiple if needed.
+- For status=answered, set reason to the EMPTY STRING "". Do not explain answered status in reason:
+  include only cited claims in claims.
 - For status=insufficient_evidence, do not supply the requested unsupported figure or outcome.
 - Answer in the same language as the research question.
 - Return only the specified structured JSON format.
@@ -89,9 +91,6 @@ def validate_answer(data: dict[str, Any], hits: list[dict[str, Any]]) -> dict[st
         raise AnswerError("Answered status requires at least one sourced claim")
     if len(data["claims"]) > 8:
         raise AnswerError("Too many generated claims")
-    if data["reason"]:
-        # The reason belongs to an unsupported case; don't treat hidden content as cited.
-        raise AnswerError("Answered status requires an empty reason")
     for claim in data["claims"]:
         if (not isinstance(claim, dict) or set(claim) != {"statement", "citation_ids"}
                 or not isinstance(claim["statement"], str) or not claim["statement"].strip()
@@ -100,7 +99,10 @@ def validate_answer(data: dict[str, Any], hits: list[dict[str, Any]]) -> dict[st
         for ref in claim["citation_ids"]:
             if not isinstance(ref, str) or ref not in known:
                 raise AnswerError(f"Unknown citation ID: {ref!r}")
-    return data
+    # The model can fill reason even for answered status, because the JSON schema
+    # cannot express a conditional empty-string requirement. Discard this uncited
+    # extra text rather than losing otherwise valid, cited claims.
+    return {**data, "reason": ""}
 
 
 def call_openai(question: str, hits: list[dict[str, Any]], *, model: str,

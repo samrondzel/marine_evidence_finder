@@ -72,3 +72,34 @@ def test_openai_payload_and_structured_output_via_fake_client():
 def test_reject_incorrect_structure():
     with pytest.raises(AnswerError):
         validate_answer({"status": "answered", "reason": "", "claims": [], "extra": 1}, [HIT])
+
+
+def test_answered_with_nonempty_reason_is_normalized_not_rejected():
+    raw = {"status": "answered", "reason": "The cited study describes the effect.",
+           "claims": [{"statement": "Whistle frequency was higher.",
+                       "citation_ids": [HIT["chunk_id"]]}]}
+    output = validate_answer(raw, [HIT])
+    assert output["status"] == "answered"
+    assert output["reason"] == ""
+    assert output["claims"] == raw["claims"]
+    assert raw["reason"]  # Do not mutate the original API response.
+
+
+def test_answered_with_reason_still_rejects_invalid_citations():
+    raw = {"status": "answered", "reason": "Explanation",
+           "claims": [{"statement": "A claim", "citation_ids": ["invented-id"]}]}
+    with pytest.raises(AnswerError, match="Unknown citation ID"):
+        validate_answer(raw, [HIT])
+
+
+def test_api_answered_with_nonempty_reason_keeps_citations():
+    class FakeResponses:
+        def create(self, **kwargs):
+            return SimpleNamespace(status="completed", output_text=json.dumps({
+                "status": "answered", "reason": "Because it is documented in the cited passage.",
+                "claims": [{"statement": "Whistle frequency was higher.",
+                            "citation_ids": [HIT["chunk_id"]]}]}))
+    response = call_openai("What did dolphins change?", [HIT],
+                           client=SimpleNamespace(responses=FakeResponses()), model="test-model")
+    assert response["reason"] == ""
+    assert response["claims"][0]["citation_ids"] == [HIT["chunk_id"]]

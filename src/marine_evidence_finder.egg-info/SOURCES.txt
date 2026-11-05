@@ -1,9 +1,11 @@
 pyproject.toml
 src/marine_evidence/__init__.py
 src/marine_evidence/answer.py
+src/marine_evidence/api.py
 src/marine_evidence/bm25.py
 src/marine_evidence/chunk.py
 src/marine_evidence/chunk_word_safe.py
+src/marine_evidence/corpus_store.py
 src/marine_evidence/evidence_eval.py
 src/marine_evidence/hybrid.py
 src/marine_evidence/ingest.py
@@ -14,9 +16,11 @@ src/marine_evidence_finder.egg-info/dependency_links.txt
 src/marine_evidence_finder.egg-info/requires.txt
 src/marine_evidence_finder.egg-info/top_level.txt
 tests/test_answer.py
+tests/test_api.py
 tests/test_bm25.py
 tests/test_chunk.py
 tests/test_chunk_word_safe.py
+tests/test_corpus_store.py
 tests/test_evidence_eval.py
 tests/test_gte_models.py
 tests/test_hybrid.py

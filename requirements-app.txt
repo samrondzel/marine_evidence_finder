@@ -1,0 +1,7 @@
+fastapi>=0.110,<1
+uvicorn>=0.28,<1
+python-multipart>=0.0.9,<1
+streamlit>=1.36,<2
+requests>=2.31,<3
+httpx>=0.27,<1
+# Keep the existing OpenAI/pydantic versions from requirements-answer.txt.
