@@ -1,0 +1,27 @@
+# CI-only image names. Append to the isolated fixture's existing Compose files.
+# The same runtime image is used by API, worker and reconciler.
+x-labels: &release-labels
+  org.opencontainers.image.source: ${GITHUB_SERVER_URL:?CI only}/${GITHUB_REPOSITORY:?CI only}
+  org.opencontainers.image.revision: ${GITHUB_SHA:?CI only}
+services:
+  api:
+    image: marine-ci-runtime:tested
+    pull_policy: never
+    build:
+      labels: *release-labels
+  worker:
+    image: marine-ci-runtime:tested
+    pull_policy: never
+  reconciler:
+    image: marine-ci-runtime:tested
+    pull_policy: never
+  ui:
+    image: marine-ci-ui:tested
+    pull_policy: never
+    build:
+      labels: *release-labels
+  db-migrate:
+    image: marine-ci-migrations:tested
+    pull_policy: never
+    build:
+      labels: *release-labels
