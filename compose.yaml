@@ -10,7 +10,12 @@ services:
       MARINE_PROJECT_ROOT: /app
       MARINE_UPLOADS_DIR: /app/data/app
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      MARINE_LLM_PRICES_PATH: /app/config/llm_prices.json
     volumes:
+      - type: bind
+        source: ./config/llm_prices.json
+        target: /app/config/llm_prices.json
+        read_only: true
       - type: bind
         source: ./data/chunks/word_safe
         target: /app/data/chunks/word_safe

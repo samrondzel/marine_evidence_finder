@@ -1,0 +1,22 @@
+# Isolated LOCAL TEST database. Start with ONLY `-f compose.pgtest.yaml`.
+# Does NOT use the real marine_pgdata volume or MARINE_DB_PASSWORD.
+name: marine-evidence-pgtest
+services:
+  db-test:
+    image: postgres:16-bookworm
+    environment:
+      POSTGRES_DB: marine_evidence_test
+      POSTGRES_USER: marine_test
+      POSTGRES_PASSWORD: local_ci_only
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - marine_pgtest_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U marine_test -d marine_evidence_test"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 5s
+volumes:
+  marine_pgtest_data:

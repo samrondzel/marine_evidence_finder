@@ -1,0 +1,7 @@
+# Offline test encoders are numpy-based; no Torch or model downloads required.
+-e .[dev]
+-r requirements-answer.txt
+-r requirements-app.txt
+-r requirements-db.txt
+-r requirements-jobs.txt
+numpy>=1.24,<3

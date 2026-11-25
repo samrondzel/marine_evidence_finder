@@ -1,0 +1,17 @@
+# Add AFTER compose.yaml and compose.postgres.yaml to switch API metadata to PG.
+# One API worker only until BM25 indexing is synchronized across processes.
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.metadata
+    environment:
+      MARINE_METADATA_BACKEND: postgres
+      PGHOST: db
+      PGPORT: "5432"
+      PGDATABASE: ${MARINE_DB_NAME:-marine_evidence}
+      PGUSER: ${MARINE_DB_USER:-marine_evidence}
+      PGPASSWORD: ${MARINE_DB_PASSWORD:?Set MARINE_DB_PASSWORD in your local .env file}
+    depends_on:
+      db:
+        condition: service_healthy
