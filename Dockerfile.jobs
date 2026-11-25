@@ -1,0 +1,12 @@
+# Extends the Postgres-capable runtime with Redis + RQ.
+FROM python:3.11-slim
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 PYTHONPATH=/app/src
+WORKDIR /app
+COPY pyproject.toml requirements-answer.txt requirements-app.txt requirements-db.txt requirements-jobs.txt ./
+COPY src/ ./src/
+RUN python -m pip install --no-cache-dir . -r requirements-answer.txt -r requirements-app.txt -r requirements-db.txt -r requirements-jobs.txt
+COPY streamlit_app.py ./
+RUN groupadd --system marine && useradd --system --uid 10001 --gid marine --create-home marine && \
+    mkdir -p /app/data/app /app/data/chunks/word_safe /app/papers /app/evaluation && \
+    chown -R marine:marine /app
+USER marine

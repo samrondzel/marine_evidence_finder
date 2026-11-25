@@ -1,0 +1,102 @@
+# Append after compose.yaml, compose.postgres.yaml, and compose.metadata.yaml.
+# First working async ingestion slice. Redis is internal-only; no host port.
+services:
+  redis:
+    image: redis:7.4-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - marine_redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.jobs
+    environment:
+      MARINE_ASYNC_INGESTION: "1"
+      MARINE_LOG_FORMAT: ${MARINE_LOG_FORMAT:-json}
+      REDIS_URL: redis://redis:6379/0
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.jobs
+    command: ["rq", "worker", "--url", "redis://redis:6379/0", "marine-ingest"]
+    init: true
+    environment:
+      MARINE_PROJECT_ROOT: /app
+      MARINE_UPLOADS_DIR: /app/data/app
+      MARINE_LOG_FORMAT: ${MARINE_LOG_FORMAT:-json}
+      PGHOST: db
+      PGPORT: "5432"
+      PGDATABASE: ${MARINE_DB_NAME:-marine_evidence}
+      PGUSER: ${MARINE_DB_USER:-marine_evidence}
+      PGPASSWORD: ${MARINE_DB_PASSWORD:?Set MARINE_DB_PASSWORD in .env}
+      REDIS_URL: redis://redis:6379/0
+      MARINE_JOB_MAX_ATTEMPTS: ${MARINE_JOB_MAX_ATTEMPTS:-3}
+      MARINE_JOB_BACKOFF_BASE: ${MARINE_JOB_BACKOFF_BASE:-2}
+      MARINE_CHAOS_PAUSE_AFTER_CLAIM_SECONDS: ${MARINE_CHAOS_PAUSE_AFTER_CLAIM_SECONDS:-0}
+    volumes:
+      - type: bind
+        source: ./data/chunks/word_safe
+        target: /app/data/chunks/word_safe
+        read_only: true
+      - type: bind
+        source: ./papers
+        target: /app/papers
+        read_only: true
+      - type: bind
+        source: ./evaluation/papers_manifest.json
+        target: /app/evaluation/papers_manifest.json
+        read_only: true
+      - type: bind
+        source: ./data/app
+        target: /app/data/app
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  reconciler:
+    build:
+      context: .
+      dockerfile: Dockerfile.jobs
+    command: ["python", "-m", "marine_evidence.job_reconciler"]
+    restart: unless-stopped
+    environment:
+      MARINE_PROJECT_ROOT: /app
+      MARINE_UPLOADS_DIR: /app/data/app
+      MARINE_LOG_FORMAT: ${MARINE_LOG_FORMAT:-json}
+      PGHOST: db
+      PGPORT: "5432"
+      PGDATABASE: ${MARINE_DB_NAME:-marine_evidence}
+      PGUSER: ${MARINE_DB_USER:-marine_evidence}
+      PGPASSWORD: ${MARINE_DB_PASSWORD:?Set MARINE_DB_PASSWORD in .env}
+      REDIS_URL: redis://redis:6379/0
+      MARINE_JOB_MAX_ATTEMPTS: ${MARINE_JOB_MAX_ATTEMPTS:-3}
+      MARINE_JOB_BACKOFF_BASE: ${MARINE_JOB_BACKOFF_BASE:-2}
+      MARINE_RECONCILE_INTERVAL_SECONDS: ${MARINE_RECONCILE_INTERVAL_SECONDS:-5}
+    volumes:
+      - type: bind
+        source: ./data/app
+        target: /app/data/app
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  ui:
+    environment:
+      MARINE_ASYNC_INGESTION: "1"
+
+volumes:
+  marine_redisdata:
