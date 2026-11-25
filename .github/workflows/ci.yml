@@ -53,6 +53,12 @@ jobs:
             requirements-ci.txt
       - name: Check tracked paths for local data and credentials
         run: python scripts/check_ci_inputs.py
+      - name: Scan tracked snapshot for secrets
+        run: |
+          snapshot=$(mktemp -d "$RUNNER_TEMP/marine-scan.XXXXXX")
+          trap 'rm -rf "$snapshot"' EXIT
+          git archive HEAD | tar -x -C "$snapshot"
+          docker run --rm -v "$snapshot:/scan:ro" ghcr.io/gitleaks/gitleaks:v8.30.1 dir /scan --redact=100 --max-archive-depth=3
       - name: Install test dependencies
         run: python -m pip install -r requirements-ci.txt
       - name: Migrate isolated PostgreSQL database
@@ -79,4 +85,51 @@ jobs:
       - name: Install fixture and smoke dependencies
         run: python -m pip install 'pymupdf>=1.24,<2' 'requests>=2.31,<3'
       - name: Build, migrate and smoke-test the isolated stack
+        env:
+          MARINE_CI_IMAGE_EXPORT: ${{ github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && format('{0}/marine-tested-images', runner.temp) || '' }}
         run: bash scripts/ci_compose_smoke.sh
+      - name: Transfer tested images to publishing job
+        if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+        uses: actions/upload-artifact@v6
+        with:
+          name: marine-tested-images-${{ github.sha }}
+          path: ${{ runner.temp }}/marine-tested-images/
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 0
+          overwrite: true
+
+  publish:
+    name: Publish tested images to GHCR
+    needs: docker-smoke
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v7
+        with:
+          name: marine-tested-images-${{ github.sha }}
+          path: ${{ runner.temp }}/marine-tested-images
+      - name: Verify transferred bundle
+        working-directory: ${{ runner.temp }}/marine-tested-images
+        run: sha256sum -c SHA256SUMS
+      - name: Push tested images and record registry digests
+        env:
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/publish_tested_images.py "$RUNNER_TEMP/marine-tested-images" "$RUNNER_TEMP/marine-release"
+      - name: Upload release manifest
+        uses: actions/upload-artifact@v6
+        with:
+          name: marine-release-${{ github.sha }}-attempt-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/marine-release/
+          if-no-files-found: error
+          retention-days: 30
